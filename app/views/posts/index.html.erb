@@ -6,7 +6,7 @@
   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to 'Sign in', new_user_session_path %>
-  <%= link_to 'Sign up', new_user_registration_path %>
+  <%#= link_to 'Sign up', new_user_registration_path %>
 <% end %>
 
 
@@ -15,7 +15,7 @@
     <h3><%= p.title %></h3>
     <p><%= p.content %></p>
   <% end %>
-  
+
   <% if current_user %>
     <%= link_to 'Edit', edit_post_path(p) %>
     <%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %>
