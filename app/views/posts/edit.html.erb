@@ -1,0 +1,7 @@
+<h1>Edit post</h1>
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, label: 'Title<br>'.html_safe %>
+  <%= f.input :content, as: :text, label: 'Content<br>'.html_safe %>
+  <%= f.button :submit %>
+<% end %>
