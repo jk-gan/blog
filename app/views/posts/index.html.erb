@@ -11,8 +11,11 @@
 
 
 <% @posts.each do |p| %>
-  <h3><%= p.title %></h3>
-  <p><%= p.content %></p>
+  <%= link_to post_path(p) do %>
+    <h3><%= p.title %></h3>
+    <p><%= p.content %></p>
+  <% end %>
+  
   <% if current_user %>
     <%= link_to 'Edit', edit_post_path(p) %>
     <%= link_to 'Delete', post_path(p), method: :delete, data: { confirm: 'Are you sure?' } %>
